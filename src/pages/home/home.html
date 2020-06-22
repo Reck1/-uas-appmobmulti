@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Berita Hari ini
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let article of articles">
+    <img src="{{article.urlToImage}}" alt="">
+    <ion-card-header>
+      <p>{{article.publishedAt | date }}</p>
+      <P>{{article.source.name}}</P></ion-card-header>
+      <ion-card-content>
+        <ion-card-title>{{article.title}}</ion-card-title>
+        
+      </ion-card-content>
+  </ion-card>
+</ion-content>
